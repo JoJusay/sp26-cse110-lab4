@@ -1,1 +1,11 @@
-
+1. Line 12 would log ```prices.length``` since ```i``` was declared as ```var```, meaning it is not restricted to the for loop.
+2. Because ```discountedPrice``` was declared as ```var```, and line 13 takes place after the for loop, line 13 would log the last declaration of ```discountedPrice```.
+3. ```finalPrice``` was declared with ```var```, and it was used inside of the for loop, so line 14 would log the last declaration of ```finalPrice``` from the for loop.
+4. The function will return an array of values that were calulated in the for loop. Because it was defined as ```var``` and because values were pushed into it, there would not be any errors in returning it.
+5. Line 12 would return an error. Because ```i``` was declared in the for loop using ```let```, its existence is contained only when the for loop is running and therefore it no longer exists outside of it.
+6. Line 13 would also return an error. Because it was defined using ```let```, it only exists within the block it was decalred in, that being the for loop. Because line 13 is after the for loop, ```discountedPrice``` no longer exists, so attempting to log it would cause an error
+7. This would not result in an error and would instead properly log what ```finalPrice``` was at the end of the for loop. It was declared using ```let``` within the function block, so logging it would not cause errors since line 13 is in the same scope.
+8. The function will return an array of values that were calulated in the for loop. Because it was defined as ```let``` in the same scope as the return statement, and because values were pushed into it in the for loop, there would not be any errors in returning it.
+9. Line 11 would return an error. Because ```i``` was declared in the for loop using ```let```, its existence is contained only when the for loop is running and therefore it no longer exists outside of it, hence using ```i``` as undefined would cause an error.
+10. Line 12 would log ```length``` properly. The length is not changed at all so the use of ```const``` is valid. Because it was also declared in the same scope as line 12, there would be no problems with accessing it and logging it.
+11. The function will return an empty array. ```discounted``` is a ```const``` variable, meaning that when values are pushed into the function, nothing actually happens, so ```discounted``` stays empty.
