@@ -10,12 +10,19 @@
 10. Line 12 would log ```length``` properly. The length is not changed at all so the use of ```const``` is valid. Because it was also declared in the same scope as line 12, there would be no problems with accessing it and logging it.
 11. The function will return an empty array. ```discounted``` is a ```const``` variable, meaning that when values are pushed into the function, nothing actually happens, so ```discounted``` stays empty.
 12. A:```student.name```, B: ```student["Grad Year"]```, C:```student.greeting()```, D:```student["Favorite Teacher"].name```, E:```student.courseLoad[0]```
-13. Arithmetic
-  - A: ```'3' + 2 = '32```. This is because the ```2``` maps directly to a string and the ```+``` concatenates the two strings.
-  - B: ```'3' - 2 = 1```. This is because the ```'3'``` maps to the integer ```3```, so substraction is performed.
-  - C: ```3 + null = 3```. ```null``` is equivalent to the integer ```0```, so we are performing addition.
-  - D: ```'3' + null = 3null```. This is because ```null``` is converted into a string, so the ```+``` works as concatenation.
-  - E: ```true + 3 = 4```. This is because ```true``` maps to the value ```1```, so the ```+``` works as addition.
-  - F: ```false + null = 0```. Neither of the two are declared as strings, so they are converted into integers. Both ```false``` and ```null``` map to ```0```, so we get ```0``` when adding.
-  - G: ```'3' + undefined = 3undefined```. The ```undefined``` gets converted into a string and gets concatenated with the 3.
-  - H: ```'3' - undefined = NaN```. There is no string operator with ```-```, so the 3 gets converted into an integer. Because ```undefined == NaN```, we get ```NaN``` by subtracting it from 3.
+13. Arithmetic:
+    - A: ```'3' + 2 = '32```. This is because the ```2``` maps directly to a string and the ```+``` concatenates the two strings.
+    - B: ```'3' - 2 = 1```. This is because the ```'3'``` maps to the integer ```3```, so substraction is performed.
+    - C: ```3 + null = 3```. ```null``` is equivalent to the integer ```0```, so we are performing addition.
+    - D: ```'3' + null = 3null```. This is because ```null``` is converted into a string, so the ```+``` works as concatenation.
+    - E: ```true + 3 = 4```. This is because ```true``` maps to the value ```1```, so the ```+``` works as addition.
+    - F: ```false + null = 0```. Neither of the two are declared as strings, so they are converted into integers. Both ```false``` and ```null``` map to ```0```, so we get ```0``` when adding.
+    - G: ```'3' + undefined = 3undefined```. The ```undefined``` gets converted into a string and gets concatenated with the 3.
+    - H: ```'3' - undefined = NaN```. There is no string operator with ```-```, so the 3 gets converted into an integer. Because ```undefined == NaN```, we get ```NaN``` by subtracting it from 3.
+14. Comparison:
+    - ```'2' > 1 --> true```. ```2``` is converted to an integer, and ```2 > 1```, so ```true``` is returned.
+    - ```'2' < '12' --> false```. This compares the characters of each string to check the lexographical order. Because the first character ```'2'``` does ont come after ```'1'```, we get ```false```.
+    - ```2 == '2' --> true```. This converts the two arguments to the same type. Because they are equivalent in casting to both integers and strings, we get ```true```.
+    - ```2 === '2' --> false```. This compares their datatypes. Because the datatypes are not the same, ```false``` is returned.
+    - ```true == 2 --> false```. ```true``` maps to ```1```, and because ```1``` and ```2``` are not the same, false gets returned.
+    - ```true === Boolean(2) --> true```. ```Boolean(2)``` converts to true if the value is not empty, ```null```, ```0```, ```NaN```, or ```undefined```, the comparison between the two arguments returns ```true```.
