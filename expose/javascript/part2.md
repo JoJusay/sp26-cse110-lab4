@@ -9,7 +9,12 @@
 9. Line 11 would return an error. Because ```i``` was declared in the for loop using ```let```, its existence is contained only when the for loop is running and therefore it no longer exists outside of it, hence using ```i``` as undefined would cause an error.
 10. Line 12 would log ```length``` properly. The length is not changed at all so the use of ```const``` is valid. Because it was also declared in the same scope as line 12, there would be no problems with accessing it and logging it.
 11. The function will return an array that has been properly populate. ```discounted``` is a ```const``` variable, meaning that the entire array cannot be reassigned, but the contents itself can be changed, so ```discounted``` is properly allocated.
-12. A:```student.name```, B: ```student["Grad Year"]```, C:```student.greeting()```, D:```student["Favorite Teacher"].name```, E:```student.courseLoad[0]```
+12. Notation
+    - A:```student.name```
+    - B: ```student["Grad Year"]```
+    - C:```student.greeting()```
+    - D:```student["Favorite Teacher"].name```
+    - E:```student.courseLoad[0]```
 13. Arithmetic:
     - A: ```'3' + 2 = '32```. This is because the ```2``` maps directly to a string and the ```+``` concatenates the two strings.
     - B: ```'3' - 2 = 1```. This is because the ```'3'``` maps to the integer ```3```, so substraction is performed.
@@ -29,3 +34,5 @@
 15. ```==``` compares two values and allows for type conversions to check if they are equivalent. ```===``` does not allow for type conversions and only compares two values as they are given, so if they do not match data types then the value will be ```false```
 16. **ANSWERED IN ```part2-question16.js```**
 17. The result of this ```modifyArray([1,2,3], doSomething)``` is an array ```[2,4,6]```. On the initial call, a new array aptly named ```newArr``` is allocated as empty. Then we iterate through the ```array``` parameter and perform the ```callback``` parameter function on it, followed by pushing the result onto ```newArr```. Because ```doSomething``` was passed as the ```callback``` parameter, we are performing doubling onto each othe the values in ```array```, so the values of ```newArr``` are double that of the values in ```array```.
+18. **ANSWERED IN ```part2-question18.js```**
+19. ```1 \n 4 \n 3 \n 2```
